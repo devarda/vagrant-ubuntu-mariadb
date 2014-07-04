@@ -24,7 +24,7 @@ This project enables you to install [MariaDB 5.5] in a virtual machine running U
   
 ## Connecting
 
-You should now be able to MariaDB at `localhost:3306/` as `root` with password `P@ssw0rd`.
+You should now be able to connect to MariaDB at `localhost:3306/` as `root` with password `P@ssw0rd`.
 
 [Vagrant]: http://www.vagrantup.com/
 [MariaDB 5.5]: https://mariadb.org/ 
