@@ -6,7 +6,7 @@ sudo add-apt-repository 'deb http://ftp.cc.uoc.gr/mirrors/mariadb/repo/5.5/ubunt
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password P@ssw0rd'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password P@ssw0rd'
 sudo apt-get update
-sudo apt-get -y install mariadb-server || true 
-mysql --user=root --password=P@ssw0rd -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'P@ssw0rd' WITH GRANT OPTION; FLUSH PRIVILEGES;" 
+sudo apt-get -y install mariadb-server
 sudo sed -i.bak 's/^bind-address/#bind-address/g' /etc/mysql/my.cnf
-/etc/init.d/mysql restart
+mysql --user=root --password=P@ssw0rd -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'P@ssw0rd' WITH GRANT OPTION; FLUSH PRIVILEGES;" 
+
